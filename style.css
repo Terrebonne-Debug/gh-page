@@ -41,46 +41,7 @@ body {
   border-radius: 6px;
   transition: background 0.2s ease;
 }
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-}
 
-.buttons a {
-  flex: 1 1 120px;
-  text-align: center;
-}
-
-/* Section liens secondaires */
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-bottom: 2rem;
-}
-
-.actions a {
-  flex: 1 1 200px;
-  text-align: center;
-}
-
-/* Responsive fix pour mobile */
-@media (max-width: 600px) {
-  .buttons,
-  .actions {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .buttons a,
-  .actions a {
-    width: 100%;
-    max-width: 280px;
-  }
 /* Liens vers services externes */
 .nav-link {
   background: var(--green);
