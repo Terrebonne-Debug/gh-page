@@ -16,52 +16,63 @@ body {
   text-align: center;
 }
 
-/* === NAVIGATION === */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--box);
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.nav-left {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.nav-right a {
-  margin-left: 0.8rem;
+/* === BOUTONS === */
+.btn {
   text-decoration: none;
   font-size: 0.9rem;
   padding: 0.5rem 1rem;
   border-radius: 6px;
+  display: inline-block;
   transition: background 0.2s ease;
-}
-
-/* Liens vers services externes */
-.nav-link {
-  background: var(--green);
   color: white;
 }
 
-.nav-link:hover {
+/* Liens vers services externes */
+.navbar-group .btn {
+  background: var(--green);
+}
+
+.navbar-group .btn:hover {
   background: var(--green-hover);
 }
 
 /* Actions communautaires internes */
-.nav-action {
-  background: #3b3f58;
-  color: #ffffffd0;
-  border: 1px solid #58a6ff50;
+.navbar-group.alt .btn {
+  background-color: #2d2d55;
 }
 
-.nav-action:hover {
-  background: #4a4f6d;
-  color: #ffffff;
+.navbar-group.alt .btn:hover {
+  background-color: #1f1f44;
+}
+
+/* === NAVIGATION === */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--box);
+  border-bottom: 1px solid #222;
+}
+
+.navbar-left .logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #d3d7e0;
+}
+
+.navbar-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.navbar-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 /* === PAGE CONTENT === */
@@ -151,4 +162,26 @@ h1 {
   margin-top: 3rem;
   font-size: 1.6rem;
   color: var(--blue);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .navbar-group {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
 }
