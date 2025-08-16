@@ -7,22 +7,23 @@ const events = [
 ];
 
 const now = new Date();
-now.setHours(0, 0, 0, 0);
+now.setHours(12, 1, 0, 0);
+
+const parseLocalDate = (dateString) => {
+    const [year, month, day] = dateString.split('-').map(Number);
+    return new Date(year, month - 1, day);
+}
 
 const parsedEvents = events.map(event => ({
     ...event,
     dateObj: parseLocalDate(event.date)
 }));
 
-function parseLocalDate(dateString) {
-    const [year, month, day] = dateString.split('-').map(Number);
-    return new Date(year, month - 1, day);
-}
 
 const pastEvents = parsedEvents
     .filter(e => e.dateObj < now)
     .sort((a, b) => b.dateObj - a.dateObj)
-    .slice(0, 2);
+    .slice(0, 3);
 
 const upcomingEvents = parsedEvents
     .filter(e => e.dateObj >= now)
@@ -37,7 +38,7 @@ const formatDate = date =>
         timeZone: 'America/Toronto'
     }).format(date);
 
-function createEventSection(title, items) {
+createEventSection = (title, items) => {
     const section = document.createElement('section');
     const heading = document.createElement('h3');
     heading.textContent = title;
