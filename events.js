@@ -1,7 +1,9 @@
 const events = [
     { date: '2025-07-25', status: 'Passé' },
     { date: '2025-08-01', status: 'Annulé' },
-    { date: '2025-08-08', status: 'Prévu' },
+    { date: '2025-08-08', status: 'Passé' },
+    { date: '2025-08-15', status: 'Passé' },
+    { date: '2025-08-22', status: 'Prévu' }
 ];
 
 const now = new Date();
