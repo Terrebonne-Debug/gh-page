@@ -8,14 +8,15 @@ class EventsManager {
          * L'ordre n'as pas d'importance
          */
         this.events = [
-            { date: '2025-07-25', status: 'Passé' },
-            { date: '2025-08-01', status: 'Annulé' },
-            { date: '2025-08-08', status: 'Passé' },
-            { date: '2025-08-15', status: 'Passé' },
-            { date: '2025-08-22', status: 'Annulé' },
+            { date: '2025-07-25', status: 'Passé'},
+            { date: '2025-08-01', status: 'Annulé'},
+            { date: '2025-08-08', status: 'Passé'},
+            { date: '2025-08-15', status: 'Passé'},
+            { date: '2025-08-22', status: 'Annulé'},
             { date: '2026-10-29', status: "Passé"},
-	    { date: '2026-11-05', status: 'Passé'}, 
-{date: '2026-11-12', status: 'Prévu' } 
+	        { date: '2026-11-05', status: 'Passé'}, 
+            {date: '2026-11-12', status: 'Passé'},
+			{date: '2026-11-19', status: 'Prévu'},
         ];
 
         this.now = this.#generateNow();
