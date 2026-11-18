@@ -16,7 +16,8 @@ class EventsManager {
             { date: '2026-10-29', status: "Passé"},
 	        { date: '2026-11-05', status: 'Passé'}, 
             {date: '2026-11-12', status: 'Passé'},
-			{date: '2026-11-19', status: 'Prévu'},
+			{date: '2026-11-19', status: 'Annulé'},
+			{date: '2026-11-26', status: 'Prévu'},
         ];
 
         this.now = this.#generateNow();
